@@ -170,7 +170,7 @@
             <Parameter name="regions" type="Array(string)" value="{surface}" />
             <ParameterList name="boundary pressure" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="101325.0" />
+                <Parameter name="value" type="double" value="101025.0" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
