@@ -1,18 +1,17 @@
 <ParameterList name="Main" type="ParameterList">
-  <Parameter name="Native Unstructured Input" type="bool" value="true" />
-  <Parameter name="grid_option" type="string" value="Unstructured" />
   <ParameterList name="mesh" type="ParameterList">
-    <Parameter name="framework" type="string" value="MSTK" />
-    <ParameterList name="read mesh file" type="ParameterList">
-      <Parameter name="file" type="string" value="../../mesh/mesh_1d_sp.exo" />
-      <Parameter name="format" type="string" value="Exodus II" />
+    <ParameterList name="domain" type="ParameterList">
+      <Parameter name="mesh type" type="string" value="read mesh file" />
+      <ParameterList name="read mesh file parameters" type="ParameterList">
+        <Parameter name="file" type="string" value="../../mesh/mesh_1d_sp.exo" />
+        <Parameter name="format" type="string" value="Exodus II" />
+      </ParameterList>
     </ParameterList>
   </ParameterList>
 
   <ParameterList name="Domain" type="ParameterList">
     <Parameter name="Spatial Dimension" type="int" value="3" />
   </ParameterList>
-
   <ParameterList name="regions" type="ParameterList">
     <ParameterList name="computational domain" type="ParameterList">
       <ParameterList name="region: box" type="ParameterList">
@@ -54,54 +53,53 @@
     </ParameterList>
     <ParameterList name="surface">
       <ParameterList name="region: plane">
-        <Parameter name="point" type="Array(double)" value="{1.,1.,50.}"/>
-        <Parameter name="normal" type="Array(double)" value="{0.,0.,1.}"/>
+        <Parameter name="point" type="Array(double)" value="{1.0,1.0,50.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,0.0,1.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="bottom face">
       <ParameterList name="region: plane">
-        <Parameter name="point" type="Array(double)" value="{0.,0.,0.}"/>
-        <Parameter name="normal" type="Array(double)" value="{0.,0.,-1.}"/>
+        <Parameter name="point" type="Array(double)" value="{0.0,0.0,0.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,0.0,-1.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="east face">
       <ParameterList name="region: plane">
-        <Parameter name="point" type="Array(double)" value="{1.,1.,50.}"/>
-        <Parameter name="normal" type="Array(double)" value="{1.,0.,0.}"/>
+        <Parameter name="point" type="Array(double)" value="{1.0,1.0,50.0}" />
+        <Parameter name="normal" type="Array(double)" value="{1.0,0.0,0.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="west face">
       <ParameterList name="region: plane">
-        <Parameter name="point" type="Array(double)" value="{0.,0.,0.}"/>
-        <Parameter name="normal" type="Array(double)" value="{-1.,0.,0.}"/>
+        <Parameter name="point" type="Array(double)" value="{0.0,0.0,0.0}" />
+        <Parameter name="normal" type="Array(double)" value="{-1.0,0.0,0.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="north face">
       <ParameterList name="region: plane">
-        <Parameter name="point" type="Array(double)" value="{1.,1.,50.}"/>
-        <Parameter name="normal" type="Array(double)" value="{0.,1.,0.}"/>
+        <Parameter name="point" type="Array(double)" value="{1.0,1.0,50.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,1.0,0.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="south face">
       <ParameterList name="region: plane">
-        <Parameter name="point" type="Array(double)" value="{0.,0.,0.}"/>
-        <Parameter name="normal" type="Array(double)" value="{0.,-1.,0.}"/>
+        <Parameter name="point" type="Array(double)" value="{0.0,0.0,0.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,-1.0,0.0}" />
       </ParameterList>
     </ParameterList>
   </ParameterList>
 
-  <ParameterList name="coordinator" type="ParameterList">
+  <ParameterList name="cycle driver" type="ParameterList">
     <Parameter name="start time" type="double" value="0.0" />
     <Parameter name="start time units" type="string" value="s" />
     <Parameter name="end time" type="double" value="1.0" />
     <Parameter name="end time units" type="string" value="s" />
+    <ParameterList name="PK tree" type="ParameterList">
+      <ParameterList name="Richards" type="ParameterList">
+        <Parameter name="PK type" type="string" value="richards steady state" />
+      </ParameterList>
+    </ParameterList>
   </ParameterList>
-
-  <ParameterList name="visualization" type="ParameterList">
-    <Parameter name="file name base" type="string" value="visdump" />
-    <Parameter name="times start period stop" type="Array(double)" value="{0.0,1.0,-1.0}" />
-  </ParameterList>
-
   <ParameterList name="checkpoint" type="ParameterList">
   </ParameterList>
 
@@ -109,7 +107,7 @@
 
     <ParameterList name="Richards" type="ParameterList">
       <Parameter name="PK type" type="string" value="richards steady state" />
-      <Parameter name="primary variable" type="string" value="pressure" />
+      <Parameter name="primary variable key" type="string" value="pressure" />
       <Parameter name="absolute error tolerance" type="double" value="1.0" />
       <Parameter name="relative error tolerance" type="double" value="1.0" />
       <Parameter name="initial time step" type="double" value="1.0" />
@@ -150,7 +148,7 @@
         </ParameterList>
       </ParameterList>
 
-      <ParameterList name="Diffusion" type="ParameterList">
+      <ParameterList name="diffusion" type="ParameterList">
         <Parameter name="discretization primary" type="string" value="mfd: optimized for sparsity" />
       </ParameterList>
 
@@ -205,7 +203,7 @@
             <Parameter name="van Genuchten alpha" type="double" value="0.08" />
             <Parameter name="van Genuchten m" type="double" value="0.5" />
             <Parameter name="residual saturation" type="double" value="0.04" />
-            <Parameter name="smoothing interval width" type="double" value="100.0" />
+            <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="peat sapric" type="ParameterList">
             <Parameter name="region" type="string" value="top peat" />
@@ -213,7 +211,7 @@
             <Parameter name="van Genuchten alpha" type="double" value="0.003" />
             <Parameter name="van Genuchten m" type="double" value="0.4" />
             <Parameter name="residual saturation" type="double" value="0.22" />
-            <Parameter name="smoothing interval width" type="double" value="100.0" />
+            <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="sand" type="ParameterList">
             <Parameter name="region" type="string" value="sand" />
@@ -221,7 +219,7 @@
             <Parameter name="van Genuchten alpha" type="double" value="0.000545" />
             <Parameter name="van Genuchten m" type="double" value="0.190938511" />
             <Parameter name="residual saturation" type="double" value="0.1" />
-            <Parameter name="smoothing interval width" type="double" value="100.0" />
+            <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="bottom mineral" type="ParameterList">
             <Parameter name="region" type="string" value="bottom mineral" />
@@ -229,7 +227,7 @@
             <Parameter name="van Genuchten alpha" type="double" value="0.000545" />
             <Parameter name="van Genuchten m" type="double" value="0.190938511" />
             <Parameter name="residual saturation" type="double" value="0.1" />
-            <Parameter name="smoothing interval width" type="double" value="100.0" />
+            <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
         </ParameterList>
         <ParameterList name="VerboseObject" type="ParameterList">
@@ -351,19 +349,19 @@
         <ParameterList name="compressible porosity model parameters" type="ParameterList">
           <ParameterList name="topL" type="ParameterList">
             <Parameter name="region" type="string" value="topL" />
-            <Parameter name="pore compressibility" type="double" value="1e-08" />
+            <Parameter name="pore compressibility [Pa^-1]" type="double" value="1e-08" />
           </ParameterList>
           <ParameterList name="top peat" type="ParameterList">
             <Parameter name="region" type="string" value="top peat" />
-            <Parameter name="pore compressibility" type="double" value="1e-08" />
+            <Parameter name="pore compressibility [Pa^-1]" type="double" value="1e-08" />
           </ParameterList>
           <ParameterList name="sand" type="ParameterList">
             <Parameter name="region" type="string" value="sand" />
-            <Parameter name="pore compressibility" type="double" value="1e-08" />
+            <Parameter name="pore compressibility [Pa^-1]" type="double" value="1e-08" />
           </ParameterList>
           <ParameterList name="bottom mineral" type="ParameterList">
             <Parameter name="region" type="string" value="bottom mineral" />
-            <Parameter name="pore compressibility" type="double" value="1e-11" />
+            <Parameter name="pore compressibility [Pa^-1]" type="double" value="1e-11" />
           </ParameterList>
         </ParameterList>
       </ParameterList>
@@ -436,5 +434,11 @@
   <ParameterList name="VerboseObject" type="ParameterList">
     <Parameter name="Output File" type="string" value="none" />
     <Parameter name="Verbosity Level" type="string" value="default" />
+  </ParameterList>
+  <ParameterList name="visualization" type="ParameterList">
+    <ParameterList name="domain" type="ParameterList">
+      <Parameter name="file name base" type="string" value="visdump" />
+      <Parameter name="times start period stop" type="Array(double)" value="{0.0,1.0,-1.0}" />
+    </ParameterList>
   </ParameterList>
 </ParameterList>
