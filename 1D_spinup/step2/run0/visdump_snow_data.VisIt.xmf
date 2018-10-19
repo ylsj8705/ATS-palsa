@@ -1,0 +1,43 @@
+<Xdmf Version="2.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid CollectionType="Temporal" GridType="Collection">
+      <xi:include href="visdump_snow_data.h5.0.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.31.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.41.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.63.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.73.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.92.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.113.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.141.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.159.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.177.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.201.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.221.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.239.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.258.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.276.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.294.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.320.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.338.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.348.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.366.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.393.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.403.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.413.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.431.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.443.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.459.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.481.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.525.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.545.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.564.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.583.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.610.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.643.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.658.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.686.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.696.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+      <xi:include href="visdump_snow_data.h5.706.xmf" xpointer="xpointer(//Xdmf/Domain/Grid)"/>
+    </Grid>
+  </Domain>
+</Xdmf>

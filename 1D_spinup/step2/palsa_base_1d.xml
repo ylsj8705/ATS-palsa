@@ -12,7 +12,7 @@
     <ParameterList name="domain" type="ParameterList">
       <Parameter name="mesh type" type="string" value="read mesh file" />
       <ParameterList name="read mesh file parameters" type="ParameterList">
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../mesh_1d_sp.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
       </ParameterList>
     </ParameterList>
@@ -40,7 +40,7 @@
     <ParameterList name="topL" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="40000" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../mesh_1d_sp.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Cell" />
       </ParameterList>
@@ -48,7 +48,7 @@
     <ParameterList name="top peat" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="30000" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../mesh_1d_sp.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Cell" />
       </ParameterList>
@@ -56,7 +56,7 @@
     <ParameterList name="sand" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="20000" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../mesh_1d_sp.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Cell" />
       </ParameterList>
@@ -64,177 +64,55 @@
     <ParameterList name="bottom mineral" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="10000" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../mesh_1d_sp.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Cell" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="bottom face" type="ParameterList">
-      <ParameterList name="region: labeled set" type="ParameterList">
-        <Parameter name="label" type="string" value="1" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
-        <Parameter name="format" type="string" value="Exodus II" />
-        <Parameter name="entity" type="string" value="Face" />
+      <ParameterList name="region: plane" type="ParameterList">
+        <Parameter name="point" type="Array(double)" value="{0.0,0.0,0.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,0.0,-1.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="surface" type="ParameterList">
-      <ParameterList name="region: labeled set" type="ParameterList">
-        <Parameter name="label" type="string" value="2" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
-        <Parameter name="format" type="string" value="Exodus II" />
-        <Parameter name="entity" type="string" value="Face" />
+      <ParameterList name="region: plane" type="ParameterList">
+        <Parameter name="point" type="Array(double)" value="{1.0,1.0,50.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,0.0,1.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="east" type="ParameterList">
-      <ParameterList name="region: labeled set" type="ParameterList">
-        <Parameter name="label" type="string" value="3" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
-        <Parameter name="format" type="string" value="Exodus II" />
-        <Parameter name="entity" type="string" value="Face" />
+      <ParameterList name="region: plane" type="ParameterList">
+        <Parameter name="point" type="Array(double)" value="{1.0,1.0,50.0}" />
+        <Parameter name="normal" type="Array(double)" value="{1.0,0.0,0.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="north" type="ParameterList">
-      <ParameterList name="region: labeled set" type="ParameterList">
-        <Parameter name="label" type="string" value="4" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
-        <Parameter name="format" type="string" value="Exodus II" />
-        <Parameter name="entity" type="string" value="Face" />
+      <ParameterList name="region: plane" type="ParameterList">
+        <Parameter name="point" type="Array(double)" value="{1.0,1.0,50.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,1.0,0.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="west" type="ParameterList">
-      <ParameterList name="region: labeled set" type="ParameterList">
-        <Parameter name="label" type="string" value="5" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
-        <Parameter name="format" type="string" value="Exodus II" />
-        <Parameter name="entity" type="string" value="Face" />
+      <ParameterList name="region: plane" type="ParameterList">
+        <Parameter name="point" type="Array(double)" value="{0.0,0.0,0.0}" />
+        <Parameter name="normal" type="Array(double)" value="{-1.0,0.0,0.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="south" type="ParameterList">
-      <ParameterList name="region: labeled set" type="ParameterList">
-        <Parameter name="label" type="string" value="6" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
-        <Parameter name="format" type="string" value="Exodus II" />
-        <Parameter name="entity" type="string" value="Face" />
+      <ParameterList name="region: plane" type="ParameterList">
+        <Parameter name="point" type="Array(double)" value="{0.0,0.0,0.0}" />
+        <Parameter name="normal" type="Array(double)" value="{0.0,0.0,-1.0}" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="out 1">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.7241482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 2">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.6441482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 3">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.4841482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 4">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.2441482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 5">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,49.7191482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 6">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,49.3241482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 7">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,48.8841482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 8">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,46.6841482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 9">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,44.4841482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 10">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,40.2441482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 11">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,49.2301032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 12">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,49.1501032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 13">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,48.9901032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 14">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,48.7501032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 15">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,48.2251032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 16">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,47.8301032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 17">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,47.3901032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 18">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,45.1901032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 19">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,42.9901032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 20">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,38.7501032412}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 21">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.7441482504}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="out 22">
-      <ParameterList name="region: point">
-        <Parameter name="coordinate" type="Array(double)" value="{25.0,0.5,49.2501032412}" />
-      </ParameterList>
-    </ParameterList>
-  </ParameterList>
+   </ParameterList>
 
   <ParameterList name="cycle driver" type="ParameterList">
     <Parameter name="end cycle" type="int" value="50000000" />
-    <Parameter name="start time" type="double" value="615" />
+    <Parameter name="start time" type="double" value="250" />
     <Parameter name="start time units" type="string" value="d" />
-    <Parameter name="end time" type="double" value="36500.0" />
-    <Parameter name="wallclock duration [hrs]" type="double" value="1." />
+    <Parameter name="end time" type="double" value="615.0" />
+    <Parameter name="wallclock duration [hrs]" type="double" value="10." />
 
     <Parameter name="end time units" type="string" value="d" />
     <ParameterList name="required times" type="ParameterList">
@@ -277,220 +155,20 @@
   <ParameterList name="visualization" type="ParameterList">
     <ParameterList name="domain" type="ParameterList">
       <Parameter name="file name base" type="string" value="visdump" />
-      <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,8640.0,-1.0}" />
+      <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,864000.0,-1.0}" />
     </ParameterList>
     <ParameterList name="surface" type="ParameterList">
       <Parameter name="file name base" type="string" value="visdump_surface" />
-      <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,8640.0,-1.0}" />
+      <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,864000.0,-1.0}" />
       <Parameter name="visualize on 3D mesh" type="bool" value="true" />
     </ParameterList>
     <ParameterList name="snow" type="ParameterList">
       <Parameter name="file name base" type="string" value="visdump_snow" />
-      <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,8640.0,-1.0}" />
+      <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,864000.0,-1.0}" />
       <Parameter name="visualize on 3D mesh" type="bool" value="true" />
     </ParameterList>
   </ParameterList>
 
-  <ParameterList name="observations">
-    <ParameterList name="Temp_1">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 1" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_2.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_2">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 2" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_10.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_3">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 3" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_26.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_4">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 4" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_50.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_5">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 5" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_102.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_6">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 6" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_142.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_7">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 7" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_186.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_8">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 8" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_406.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_9">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 9" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_626.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_10">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 10" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_T_1050.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_11">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 11" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_2.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_12">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 12" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_10.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_13">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 13" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_26.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_14">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 14" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_50.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_15">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 15" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_102.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_16">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 16" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_142.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_17">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 17" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_186.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_18">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 18" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_406.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_19">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 19" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_626.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="Temp_20">
-      <Parameter name="variable" type="string" value="temperature" />
-      <Parameter name="region" type="string" value="out 20" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_T_1050.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="snow_d_1">
-      <Parameter name="variable" type="string" value="snow-depth" />
-      <Parameter name="region" type="string" value="out 21" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="pals_snow.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-    <ParameterList name="snow_d_2">
-      <Parameter name="variable" type="string" value="snow-depth" />
-      <Parameter name="region" type="string" value="out 22" />
-      <Parameter name="functional" type="string" value="observation data: point" />
-      <Parameter name="delimiter" type="string" value=" " />
-      <Parameter name="write interval" type="int" value="1" />
-      <Parameter name="observation output filename" type="string" value="fen_snow.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10800.0,-1.0}" />
-    </ParameterList>
-  </ParameterList>
   <ParameterList name="PKs" type="ParameterList">
 
     <ParameterList name="Top level MPC" type="ParameterList">
