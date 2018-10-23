@@ -652,9 +652,9 @@
       <Parameter name="PKs order" type="Array(string)" value="{subsurface flow, subsurface energy, surface flow, surface energy}" />
       <Parameter name="preconditioner type" type="string" value="picard" />
       <Parameter name="dump preconditioner" type="bool" value="false" />
-      <Parameter name="supress Jacobian terms: d div q / dT" type="bool" value="false" />
+      <Parameter name="supress Jacobian terms: d div q / dT" type="bool" value="true" />
       <Parameter name="supress Jacobian terms: d div K grad T / dp" type="bool" value="true" />
-      <Parameter name="supress Jacobian terms: div hq / dp,T" type="bool" value="false" />
+      <Parameter name="supress Jacobian terms: div hq / dp,T" type="bool" value="true" />
       <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="medium" />
       </ParameterList>
@@ -759,17 +759,17 @@
           <ParameterList name="topL fibric" type="ParameterList">
             <Parameter name="region" type="string" value="topL" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha" type="double" value="0.08" />
+            <Parameter name="van Genuchten alpha" type="double" value="8.e-4" />
             <Parameter name="van Genuchten m" type="double" value="0.5" />
-            <Parameter name="residual saturation" type="double" value="0.04" />
+            <Parameter name="residual saturation" type="double" value="0.042" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="peat sapric" type="ParameterList">
             <Parameter name="region" type="string" value="top peat" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha" type="double" value="0.003" />
+            <Parameter name="van Genuchten alpha" type="double" value="3.e-5" />
             <Parameter name="van Genuchten m" type="double" value="0.4" />
-            <Parameter name="residual saturation" type="double" value="0.22" />
+            <Parameter name="residual saturation" type="double" value="0.275" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="sand" type="ParameterList">

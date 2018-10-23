@@ -200,17 +200,17 @@
           <ParameterList name="topL fibric" type="ParameterList">
             <Parameter name="region" type="string" value="topL" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha" type="double" value="0.08" />
+            <Parameter name="van Genuchten alpha" type="double" value="8.e-4" />
             <Parameter name="van Genuchten m" type="double" value="0.5" />
-            <Parameter name="residual saturation" type="double" value="0.04" />
+            <Parameter name="residual saturation" type="double" value="0.042" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="peat sapric" type="ParameterList">
             <Parameter name="region" type="string" value="top peat" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha" type="double" value="0.003" />
+            <Parameter name="van Genuchten alpha" type="double" value="3.e-5" />
             <Parameter name="van Genuchten m" type="double" value="0.4" />
-            <Parameter name="residual saturation" type="double" value="0.22" />
+            <Parameter name="residual saturation" type="double" value="0.275" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="sand" type="ParameterList">
